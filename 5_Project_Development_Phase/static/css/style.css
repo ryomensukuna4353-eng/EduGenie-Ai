@@ -1,0 +1,395 @@
+/* --------------------------------------------------
+   GLOBAL
+-------------------------------------------------- */
+
+:root {
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #172033;
+
+    background: #f5f7fb;
+
+    line-height: 1.6;
+}
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+}
+
+
+/* --------------------------------------------------
+   MAIN CONTAINER
+-------------------------------------------------- */
+
+.container {
+
+    width: min(1000px, 92%);
+
+    margin: 0 auto;
+
+    padding: 48px 0;
+
+}
+
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+
+.hero {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 24px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.eyebrow {
+
+    margin: 0 0 8px;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-size:
+        clamp(
+            2.5rem,
+            7vw,
+            4.5rem
+        );
+
+    line-height: 1;
+
+}
+
+
+.subtitle {
+
+    max-width: 700px;
+
+    color: #5f687b;
+
+    font-size: 1.05rem;
+
+}
+
+
+/* --------------------------------------------------
+   STATUS
+-------------------------------------------------- */
+
+.status-pill {
+
+    background: #e7f7ee;
+
+    color: #167447;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+/* --------------------------------------------------
+   CARDS
+-------------------------------------------------- */
+
+.card {
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        #e2e7f0;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(
+            25,
+            40,
+            70,
+            0.06
+        );
+
+}
+
+
+/* --------------------------------------------------
+   FORM
+-------------------------------------------------- */
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 750;
+
+}
+
+
+select,
+textarea {
+
+    width: 100%;
+
+    border:
+        1px solid
+        #cfd6e4;
+
+    border-radius: 12px;
+
+    padding: 13px 14px;
+
+    margin-bottom: 18px;
+
+    font: inherit;
+
+    background: #fbfcfe;
+
+    color: inherit;
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 180px;
+
+}
+
+
+select:focus,
+textarea:focus {
+
+    outline:
+        3px solid
+        rgba(
+            80,
+            105,
+            255,
+            0.14
+        );
+
+    border-color: #7184ff;
+
+}
+
+
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
+
+.actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+button {
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding: 12px 20px;
+
+    font: inherit;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+}
+
+
+#submitBtn {
+
+    background: #172033;
+
+    color: white;
+
+}
+
+
+button.secondary,
+.copy-btn {
+
+    background: #edf1f7;
+
+    color: #263147;
+
+}
+
+
+button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* --------------------------------------------------
+   RESULT
+-------------------------------------------------- */
+
+.result-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.result-heading h2 {
+
+    margin: 0;
+
+}
+
+
+.result {
+
+    white-space: pre-wrap;
+
+    background: #f8f9fc;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    min-height: 160px;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+.result.empty {
+
+    color: #7b8495;
+
+}
+
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer {
+
+    text-align: center;
+
+    color: #7b8495;
+
+    padding: 20px;
+
+}
+
+
+/* --------------------------------------------------
+   MOBILE
+-------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .container {
+
+        padding: 28px 0;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+    }
+
+
+    .status-pill {
+
+        align-self: flex-start;
+
+    }
+
+
+    .actions {
+
+        flex-direction: column;
+
+    }
+
+
+    button {
+
+        width: 100%;
+
+    }
+
+
+    .copy-btn {
+
+        width: auto;
+
+    }
+
+}
